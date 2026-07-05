@@ -1,0 +1,62 @@
+<section class="product-page">
+
+<div class="container product-grid">
+
+<!-- PRODUCT IMAGE -->
+<div class="product-image">
+
+{% if product.featured_image %}
+
+<img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title }}">
+
+{% endif %}
+
+</div>
+
+<!-- PRODUCT INFO -->
+<div class="product-info">
+
+<h1>{{ product.title }}</h1>
+
+<p class="price">{{ product.price | money }}</p>
+
+<div class="product-description">
+
+{{ product.description }}
+
+</div>
+
+<!-- ADD TO CART -->
+<form method="post" action="/cart/add">
+
+<input type="hidden" name="id" value="{{ product.variants.first.id }}">
+
+<label>Quantity</label>
+
+<input type="number" name="quantity" value="1" min="1">
+
+<br><br>
+
+<button type="submit" class="add-to-cart">
+Add to Cart
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Product"
+    }
+  ]
+}
+{% endschema %}
