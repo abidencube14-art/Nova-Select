@@ -12,6 +12,18 @@
 
 <a href="{{ product.url }}">
 
+{% if product.compare_at_price > product.price %}
+<span class="badge sale">SALE</span>
+{% endif %}
+
+{% if product.tags contains "new" %}
+<span class="badge new">NEW</span>
+{% endif %}
+
+{% if product.tags contains "hot" %}
+<span class="badge hot">HOT</span>
+{% endif %}
+
 {% if product.featured_image %}
 
 <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}">
