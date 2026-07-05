@@ -1,0 +1,86 @@
+<section class="cart-page">
+
+<div class="container">
+
+<h1>Your Cart</h1>
+
+{% if cart.item_count > 0 %}
+
+<form action="/cart" method="post">
+
+<table class="cart-table">
+
+{% for item in cart.items %}
+
+<tr>
+
+<td class="cart-image">
+<img src="{{ item.image | image_url: width: 120 }}">
+</td>
+
+<td class="cart-title">
+{{ item.product.title }}
+</td>
+
+<td>
+<input type="number"
+name="updates[]"
+value="{{ item.quantity }}"
+min="1">
+</td>
+
+<td>
+{{ item.line_price | money }}
+</td>
+
+<td>
+<a href="/cart/change?line={{ forloop.index }}&quantity=0">
+Remove
+</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="cart-summary">
+
+<h2>Total: {{ cart.total_price | money }}</h2>
+
+<button type="submit" name="update">
+Update Cart
+</button>
+
+<button type="submit" name="checkout">
+Checkout
+</button>
+
+</div>
+
+</form>
+
+{% else %}
+
+<p>Your cart is empty 🛒</p>
+
+<a href="/collections/all">Continue Shopping</a>
+
+{% endif %}
+
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Main Cart",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Cart"
+    }
+  ]
+}
+{% endschema %}
