@@ -1,0 +1,56 @@
+<section class="why-choose">
+
+<div class="container">
+
+<h2>{{ section.settings.heading }}</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="icon">💰</div>
+<h3>Affordable Prices</h3>
+<p>We offer competitive pricing without compromising quality.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">⭐</div>
+<h3>Premium Quality</h3>
+<p>Every product is carefully selected and tested for durability.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">🚚</div>
+<h3>Fast Shipping</h3>
+<p>Quick and reliable delivery straight to your doorstep.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">🔒</div>
+<h3>Secure Checkout</h3>
+<p>Your payments and data are always safe with us.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Why Choose Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Nova Select?"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Section"
+    }
+  ]
+}
+{% endschema %}
