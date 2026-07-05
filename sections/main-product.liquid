@@ -26,6 +26,36 @@
 
 </div>
 
+<div class="related-products">
+
+<h3>You may also like</h3>
+
+<div class="related-grid">
+
+{% for product in collections.all.products limit:4 %}
+
+{% if product.id != product.id %}
+
+<div class="related-item">
+
+<a href="{{ product.url }}">
+
+<img src="{{ product.featured_image | image_url: width: 300 }}">
+
+<p>{{ product.title }}</p>
+
+</a>
+
+</div>
+
+{% endif %}
+
+{% endfor %}
+
+</div>
+
+</div>
+
 <!-- ADD TO CART -->
 <form method="post" action="/cart/add">
 
