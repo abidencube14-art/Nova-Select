@@ -1,1 +1,29 @@
+{% if section.settings.show_bar %}
 
+<div class="announcement-bar">
+
+  <p>{{ section.settings.text }}</p>
+
+</div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "label": "Show Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "🚚 Free Shipping on Orders Over $50 | Premium Quality Products"
+    }
+  ]
+}
+{% endschema %}
