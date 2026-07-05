@@ -1,1 +1,37 @@
+<section class="newsletter">
 
+<h2>
+
+Stay Updated
+
+</h2>
+
+<p>
+
+Subscribe for exclusive deals and new arrivals.
+
+</p>
+
+{% form 'customer' %}
+
+<input
+type="email"
+name="contact[email]"
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+{% endform %}
+
+</section>
+
+{% schema %}
+{
+"name":"Newsletter",
+"settings":[]
+}
+{% endschema %}
