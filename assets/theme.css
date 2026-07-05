@@ -491,3 +491,21 @@ padding:12px 20px;
 border-radius:8px;
 cursor:pointer;
 }
+
+.badge{
+position:absolute;
+padding:5px 10px;
+color:white;
+font-size:12px;
+border-radius:5px;
+top:10px;
+left:10px;
+}
+
+.sale{ background:red; }
+.new{ background:green; }
+.hot{ background:orange; }
+
+.product-card{
+position:relative;
+}
