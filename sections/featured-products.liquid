@@ -1,1 +1,72 @@
+<section class="featured-products">
 
+<div class="container">
+
+<h2>{{ section.settings.heading }}</h2>
+
+<div class="product-grid">
+
+{% for product in collections.all.products limit: section.settings.products_to_show %}
+
+<div class="product-card">
+
+<a href="{{ product.url }}">
+
+{% if product.featured_image %}
+
+<img
+src="{{ product.featured_image | image_url: width: 600 }}"
+alt="{{ product.title }}">
+
+{% endif %}
+
+<h3>{{ product.title }}</h3>
+
+<p>{{ product.price | money }}</p>
+
+</a>
+
+<button
+onclick="window.location='{{ product.url }}'">
+
+View Product
+
+</button>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Products"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Products to Show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}
