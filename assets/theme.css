@@ -509,3 +509,18 @@ left:10px;
 .product-card{
 position:relative;
 }
+
+.related-products{
+margin-top:50px;
+}
+
+.related-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.related-item img{
+width:100%;
+border-radius:10px;
+}
