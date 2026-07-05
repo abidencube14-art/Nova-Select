@@ -461,3 +461,33 @@ cursor:pointer;
 .cart-summary button:hover{
 background:#1d4ed8;
    }
+
+/* STICKY CART BAR */
+
+.sticky-cart{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+box-shadow:0 -5px 20px rgba(0,0,0,.1);
+z-index:999;
+}
+
+.sticky-info{
+display:flex;
+flex-direction:column;
+}
+
+.sticky-cart button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
