@@ -524,3 +524,17 @@ gap:15px;
 width:100%;
 border-radius:10px;
 }
+
+.floating-cart{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#2563eb;
+color:white;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+z-index:9999;
+}
