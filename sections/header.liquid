@@ -1,1 +1,48 @@
+<header class="header">
 
+  <div class="container">
+
+    <a href="{{ routes.root_url }}" class="logo">
+      {{ shop.name }}
+    </a>
+
+    <nav>
+
+      <ul>
+
+        {% for link in linklists.main-menu.links %}
+
+        <li>
+
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+
+        </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </nav>
+
+    <div class="header-icons">
+
+      <a href="{{ routes.search_url }}">🔍</a>
+
+      <a href="{{ routes.cart_url }}">
+        🛒 {{ cart.item_count }}
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}
