@@ -9,6 +9,9 @@
     "featured_products": {
       "type": "featured-products"
     },
+    "why_choose": {
+      "type": "why-choose"
+    },
     "newsletter": {
       "type": "newsletter"
     }
@@ -17,6 +20,7 @@
     "hero",
     "categories",
     "featured_products",
+    "why_choose",
     "newsletter"
   ]
 }
