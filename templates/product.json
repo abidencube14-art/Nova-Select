@@ -2,7 +2,13 @@
   "sections": {
     "main": {
       "type": "main-product"
+    },
+    "reviews": {
+      "type": "product-reviews"
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "reviews"
+  ]
 }
