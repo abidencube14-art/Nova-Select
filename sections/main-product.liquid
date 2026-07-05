@@ -60,3 +60,20 @@ Add to Cart
   ]
 }
 {% endschema %}
+
+<div class="sticky-cart">
+
+<div class="sticky-info">
+<strong>{{ product.title }}</strong>
+<span>{{ product.price | money }}</span>
+</div>
+
+<form method="post" action="/cart/add">
+
+<input type="hidden" name="id" value="{{ product.variants.first.id }}">
+
+<button type="submit">Add to Cart</button>
+
+</form>
+
+</div>
