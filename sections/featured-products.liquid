@@ -14,9 +14,7 @@
 
 {% if product.featured_image %}
 
-<img
-src="{{ product.featured_image | image_url: width: 600 }}"
-alt="{{ product.title }}">
+<img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}">
 
 {% endif %}
 
@@ -26,12 +24,15 @@ alt="{{ product.title }}">
 
 </a>
 
-<button
-onclick="window.location='{{ product.url }}'">
+<form method="post" action="/cart/add">
 
-View Product
+<input type="hidden" name="id" value="{{ product.variants.first.id }}">
 
+<button type="submit">
+Add to Cart
 </button>
+
+</form>
 
 </div>
 
