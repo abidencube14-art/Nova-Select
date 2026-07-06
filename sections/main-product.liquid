@@ -144,3 +144,25 @@ setInterval(updateTimer, 1000);
 <button>Add Bundle to Cart</button>
 
 </div>
+
+<div class="real-recommendations">
+
+<h2>You may also like</h2>
+
+<div class="rec-grid">
+
+{% for product in collections.all.products limit:4 %}
+
+<div class="rec-item">
+<a href="{{ product.url }}">
+<img src="{{ product.featured_image | img_url: '300x' }}">
+<p>{{ product.title }}</p>
+<p>{{ product.price | money }}</p>
+</a>
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
