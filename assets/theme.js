@@ -160,3 +160,13 @@ result.innerHTML = `
 });
 
 });
+
+let sticky = document.getElementById("stickyCart");
+
+window.addEventListener("scroll", function(){
+if(window.scrollY > 400){
+sticky.style.display = "flex";
+}else{
+sticky.style.display = "none";
+}
+});
