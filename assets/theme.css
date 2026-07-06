@@ -1044,3 +1044,11 @@ border-radius:12px;
 width:300px;
 text-align:center;
 }
+
+.stock{
+  color: #7a6a4f;
+}
+
+.checkout-urgency{
+  color: #7a1f1f;
+}
