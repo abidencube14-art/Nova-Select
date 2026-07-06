@@ -920,3 +920,42 @@ background:white;
 width:100%;
 border-radius:8px;
 }
+
+#emailPopup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.popup-box{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+width:300px;
+}
+
+.popup-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.popup-box button{
+width:100%;
+padding:10px;
+background:black;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
