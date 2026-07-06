@@ -2,6 +2,12 @@
    NOVA SELECT THEME
 =========================== */
 
+:root{
+  --bg: #f5f1e8;       /* cream background */
+  --primary: #d8c3a5;  /* beige primary */
+  --text: #1f1f1f;
+}
+
 *{
 margin:0;
 padding:0;
