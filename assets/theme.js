@@ -129,3 +129,34 @@ setTimeout(showPopup,4000);
 setInterval(showPopup,25000);
 
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const form = document.getElementById("tracking-form");
+
+if(!form) return;
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const tracking = document.getElementById("tracking-number").value;
+
+const result = document.getElementById("tracking-result");
+
+result.style.display = "block";
+
+result.innerHTML = `
+<h3>Tracking Number</h3>
+<p><strong>${tracking}</strong></p>
+
+<br>
+
+<p>✅ Your tracking request has been received.</p>
+
+<p>You can connect this page later to a shipping service like AfterShip, Parcel Panel or your courier for live tracking updates.</p>
+`;
+
+});
+
+});
