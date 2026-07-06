@@ -8,6 +8,11 @@
   --text: #1f1f1f;
 }
 
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
 *{
 margin:0;
 padding:0;
@@ -126,6 +131,21 @@ transition:.3s;
 
 .hero-button:hover{
 background:#1d4ed8;
+}
+
+button,
+.add-btn,
+.hero-btn,
+#stickyCart button{
+  background: var(--primary) !important;
+  color: #1f1f1f !important;
+  border: none;
+}
+
+button:hover,
+.add-btn:hover,
+.hero-btn:hover{
+  opacity: 0.85;
 }
 
 /* Newsletter */
