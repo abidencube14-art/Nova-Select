@@ -1,48 +1,155 @@
-<header class="header">
+<header class="site-header">
 
-  <div class="container">
+<div class="header-container">
 
-    <a href="{{ routes.root_url }}" class="logo">
-      {{ shop.name }}
-    </a>
+<!-- LOGO -->
+<a href="/" class="logo">
+Nova Select
+</a>
 
-    <nav>
+<!-- DESKTOP NAV -->
+<nav class="nav-links">
 
-      <ul>
+<a href="/">Home</a>
+<a href="/collections/all">Shop</a>
+<a href="/collections/home-improvement">Home Improvement</a>
+<a href="/collections/electronics">Electronics</a>
+<a href="/collections/beauty-personal-care">Beauty</a>
+<a href="/apps/parcelpanel">Track Order</a>
+<a href="/pages/contact">Contact</a>
 
-        {% for link in linklists.main-menu.links %}
+</nav>
 
-        <li>
+<!-- ICONS -->
+<div class="header-icons">
 
-          <a href="{{ link.url }}">
-            {{ link.title }}
-          </a>
+<a href="/search">🔍</a>
 
-        </li>
+<a href="/cart">
+🛒 <span id="cart-count"></span>
+</a>
 
-        {% endfor %}
+</div>
 
-      </ul>
+<!-- MOBILE MENU BUTTON -->
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
 
-    </nav>
+</div>
 
-    <div class="header-icons">
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
 
-      <a href="{{ routes.search_url }}">🔍</a>
+<a href="/">Home</a>
+<a href="/collections/all">Shop</a>
+<a href="/collections/home-improvement">Home Improvement</a>
+<a href="/collections/electronics">Electronics</a>
+<a href="/collections/beauty-personal-care">Beauty</a>
+<a href="/apps/parcelpanel">Track Order</a>
+<a href="/pages/contact">Contact</a>
 
-      <a href="{{ routes.cart_url }}">
-        🛒 {{ cart.item_count }}
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </header>
 
-{% schema %}
-{
-  "name": "Header",
-  "settings": []
+<style>
+
+.site-header{
+background:white;
+padding:15px 20px;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:999;
 }
-{% endschema %}
+
+.header-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+color:#111;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#000;
+}
+
+.header-icons{
+display:flex;
+gap:15px;
+font-size:18px;
+}
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* MOBILE */
+.mobile-menu{
+display:none;
+flex-direction:column;
+padding:15px;
+background:white;
+}
+
+.mobile-menu a{
+padding:10px 0;
+border-bottom:1px solid #eee;
+text-decoration:none;
+color:#333;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.mobile-menu.show{
+display:flex;
+}
+
+}
+
+</style>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+// cart count (simple version)
+fetch('/cart.js')
+.then(res => res.json())
+.then(cart => {
+document.getElementById("cart-count").innerText = cart.item_count;
+});
+
+</script>
