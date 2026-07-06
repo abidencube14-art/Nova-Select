@@ -85,3 +85,12 @@ time--;
 setInterval(updateTimer, 1000);
 
 </script>
+
+<div id="stickyCart">
+  <span>{{ product.title }}</span>
+
+  <form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <button type="submit">Add to Cart - {{ product.price | money }}</button>
+  </form>
+</div>
