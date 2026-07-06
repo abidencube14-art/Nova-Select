@@ -75,3 +75,57 @@ updateShippingBar();
 
 // update when cart changes
 document.addEventListener("cart:updated", updateShippingBar);
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const popup = document.getElementById("sales-popup");
+
+if(!popup) return;
+
+const notifications = [
+
+{
+title:"Popular Product",
+message:"Our Smart LED Lamp is trending today."
+},
+
+{
+title:"Trending Now",
+message:"Wireless Chargers are among this week's best sellers."
+},
+
+{
+title:"Customer Favorite",
+message:"Beauty & Personal Care products are selling fast."
+},
+
+{
+title:"Hot Category",
+message:"Home Improvement products are getting lots of attention."
+}
+
+];
+
+function showPopup(){
+
+const item = notifications[Math.floor(Math.random()*notifications.length)];
+
+document.getElementById("popup-title").textContent = item.title;
+
+document.getElementById("popup-message").textContent = item.message;
+
+popup.classList.remove("hidden");
+
+setTimeout(function(){
+
+popup.classList.add("hidden");
+
+},5000);
+
+}
+
+setTimeout(showPopup,4000);
+
+setInterval(showPopup,25000);
+
+});
