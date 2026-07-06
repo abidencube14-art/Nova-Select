@@ -61,6 +61,19 @@
 📦 Delivery: 7–14 days worldwide
 </div>
 
+<!-- ⭐ INSERT REVIEWS HERE -->
+{% if product.metafields.reviews.rating %}
+
+<div class="real-reviews">
+
+<h2>Customer Reviews</h2>
+
+<p>Rating: ⭐ {{ product.metafields.reviews.rating }}</p>
+
+</div>
+
+{% endif %}
+
 <!-- ADD TO CART -->
 <form method="post" action="/cart/add">
 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
