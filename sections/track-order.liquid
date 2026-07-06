@@ -1,0 +1,39 @@
+<section class="track-order">
+
+<div class="container">
+
+<h1>Track Your Order</h1>
+
+<p>Enter your tracking number below to check your shipment status.</p>
+
+<form id="tracking-form">
+
+<input
+type="text"
+id="tracking-number"
+placeholder="Enter Tracking Number"
+required>
+
+<button type="submit">
+Track Order
+</button>
+
+</form>
+
+<div id="tracking-result" class="tracking-result"></div>
+
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Track Order",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Track Order"
+    }
+  ]
+}
+{% endschema %}
