@@ -1,70 +1,13 @@
-<section class="hero-section">
+<section class="hero">
 
-  {% if section.settings.background_image != blank %}
-    <div class="hero-image" style="background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}');">
-  {% else %}
-    <div class="hero-image">
-  {% endif %}
+<div class="hero-container">
 
-    <div class="hero-overlay">
+<h1>Nova Select</h1>
 
-      <div class="hero-content">
+<p>Premium Home Improvement & Beauty Essentials at Affordable Prices</p>
 
-        <h1>{{ section.settings.heading }}</h1>
+<a href="/collections/all" class="hero-btn">Shop Now</a>
 
-        <p>{{ section.settings.subheading }}</p>
-
-        <a href="{{ section.settings.button_link }}" class="hero-button">
-
-          {{ section.settings.button_text }}
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
-
-{% schema %}
-{
-  "name": "Hero Banner",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Upgrade Your Home. Enhance Your Beauty. Power Your Lifestyle."
-    },
-    {
-      "type": "textarea",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Discover premium Home Improvement, Electronic Accessories and Beauty & Personal Care products—carefully selected for quality, reliability and affordability."
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Shop Now"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Hero Banner"
-    }
-  ]
-}
-{% endschema %}
