@@ -1,94 +1,171 @@
-<div class="track-order-page">
-  <div class="page-width">
+<section class="track-order-section">
+  <div class="track-container">
 
     <h1>Track Your Order</h1>
 
-    <p>
-      Enter your tracking number below to check your shipment status.
+    <p class="subtitle">
+      Stay updated on your order from dispatch to delivery.
     </p>
 
-    <form id="trackForm">
+    <div class="track-box">
+
       <input
         type="text"
         id="trackingNumber"
-        placeholder="Enter Tracking Number"
-      >
+        placeholder="Enter your tracking number">
 
-      <button type="submit">
+      <button onclick="trackOrder()">
         Track Order
       </button>
-    </form>
 
-    <div id="trackingResult"></div>
+    </div>
+
+    <div id="tracking-result"></div>
+
+    <div class="features">
+
+      <div class="feature">
+        📦
+        <h3>Fast Shipping</h3>
+        <p>Reliable worldwide delivery.</p>
+      </div>
+
+      <div class="feature">
+        🔒
+        <h3>Secure Orders</h3>
+        <p>Your purchases are protected.</p>
+      </div>
+
+      <div class="feature">
+        💬
+        <h3>Support</h3>
+        <p>Need help? Contact our support team anytime.</p>
+      </div>
+
+    </div>
 
   </div>
-</div>
+</section>
 
 <style>
-.track-order-page{
-padding:70px 20px;
+
+.track-order-section{
+padding:80px 20px;
+background:#f8f9fb;
+}
+
+.track-container{
+max-width:900px;
+margin:auto;
 text-align:center;
 }
 
-.track-order-page h1{
+.track-container h1{
 font-size:42px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.track-order-page p{
+.subtitle{
 color:#666;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.track-order-page input{
-width:320px;
-max-width:90%;
-padding:15px;
+.track-box{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.track-box input{
+width:350px;
+padding:16px;
 border:1px solid #ddd;
 border-radius:8px;
 font-size:16px;
 }
 
-.track-order-page button{
-padding:15px 30px;
+.track-box button{
+padding:16px 30px;
 background:#111;
 color:white;
 border:none;
 border-radius:8px;
-margin-left:10px;
 cursor:pointer;
+transition:.3s;
 }
 
-#trackingResult{
-margin-top:30px;
+.track-box button:hover{
+background:#333;
+}
+
+#tracking-result{
+margin-top:20px;
 font-size:18px;
 font-weight:bold;
-color:#2b9348;
+color:#28a745;
 }
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:60px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.feature h3{
+margin:15px 0 10px;
+}
+
+.feature p{
+color:#666;
+}
+
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded",function(){
 
-const form=document.getElementById("trackForm");
-
-if(!form) return;
-
-form.addEventListener("submit",function(e){
-
-e.preventDefault();
+function trackOrder(){
 
 let number=document.getElementById("trackingNumber").value;
 
+let result=document.getElementById("tracking-result");
+
 if(number==""){
-document.getElementById("trackingResult").innerHTML="Please enter a tracking number.";
+
+result.style.color="red";
+
+result.innerHTML="Please enter a tracking number.";
+
 return;
+
 }
 
-document.getElementById("trackingResult").innerHTML=
-"Tracking number <strong>"+number+"</strong> received.<br>Live shipment tracking will be connected soon.";
+result.style.color="#28a745";
 
-});
+result.innerHTML=
+"Tracking Number <b>"+number+"</b><br><br>Your package is being processed. Live tracking integration will be enabled soon.";
 
-});
+}
+
 </script>
+
+{% schema %}
+{
+  "name": "Track Order",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Track Order"
+    }
+  ]
+}
+{% endschema %}
