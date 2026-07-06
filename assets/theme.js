@@ -170,3 +170,11 @@ sticky.style.display = "flex";
 sticky.style.display = "none";
 }
 });
+
+function closePopup(){
+document.getElementById("emailPopup").style.display="none";
+}
+
+setTimeout(()=>{
+document.getElementById("emailPopup").style.display="flex";
+},5000);
