@@ -118,3 +118,29 @@ setInterval(updateTimer, 1000);
     <button type="submit">Add to Cart - {{ product.price | money }}</button>
   </form>
 </div>
+
+<div class="fbt">
+
+<h2>Frequently Bought Together</h2>
+
+<div class="fbt-items">
+
+<div class="fbt-item">
+<p>✔ {{ product.title }}</p>
+</div>
+
+<div class="fbt-item">
+<p>✔ Wireless Charger</p>
+</div>
+
+<div class="fbt-item">
+<p>✔ USB Cable</p>
+</div>
+
+</div>
+
+<p class="fbt-price">Bundle Price: Save 15%</p>
+
+<button>Add Bundle to Cart</button>
+
+</div>
