@@ -2,23 +2,39 @@
 
 <div class="product-container">
 
-<!-- IMAGE -->
-<div class="product-image">
-<img src="{{ product.featured_image | img_url: '600x' }}">
+<!-- IMAGE GALLERY -->
+<div class="gallery">
+
+<img id="mainImage" src="{{ product.featured_image | img_url: '600x' }}">
+
+<div class="thumbnails">
+
+{% for image in product.images %}
+<img src="{{ image | img_url: '100x' }}" onclick="changeImage(this)">
+{% endfor %}
+
 </div>
 
-<!-- INFO -->
+</div>
+
+<!-- PRODUCT INFO -->
 <div class="product-info">
 
 <h1>{{ product.title }}</h1>
 
 <p class="price">{{ product.price | money }}</p>
 
-<p class="stock">🟢 In Stock - Ready to ship</p>
+<p class="stock" id="stockText">🟢 Only 7 left in stock</p>
 
+<!-- COUNTDOWN -->
+<div class="countdown">
+⏳ Offer ends in: <span id="timer">03:00:00</span>
+</div>
+
+<!-- SHIPPING -->
 <div class="shipping-box">
-🚚 Free shipping on orders over $50  
-⏱ Delivery: 7–14 days worldwide
+🚚 Free shipping over $50  
+📦 Delivery: 7–14 days worldwide
 </div>
 
 <!-- ADD TO CART -->
@@ -30,10 +46,10 @@ Add to Cart
 </button>
 </form>
 
-<!-- TRUST BADGES -->
+<!-- TRUST -->
 <div class="trust">
 <p>🔒 Secure Checkout</p>
-<p>💳 Safe Payment</p>
+<p>💳 Safe Payments</p>
 <p>📦 Worldwide Shipping</p>
 </div>
 
@@ -42,3 +58,30 @@ Add to Cart
 </div>
 
 </section>
+
+<script>
+
+// IMAGE SWITCH
+function changeImage(el){
+document.getElementById("mainImage").src = el.src;
+}
+
+// COUNTDOWN TIMER
+let time = 3 * 60 * 60;
+
+function updateTimer(){
+
+let hrs = Math.floor(time / 3600);
+let mins = Math.floor((time % 3600) / 60);
+let secs = time % 60;
+
+document.getElementById("timer").innerText =
+hrs + ":" + mins + ":" + secs;
+
+time--;
+
+}
+
+setInterval(updateTimer, 1000);
+
+</script>
