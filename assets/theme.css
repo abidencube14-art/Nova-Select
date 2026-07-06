@@ -992,3 +992,11 @@ border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 }
+
+.funnel-banner{
+background:#ef4444;
+color:white;
+padding:12px;
+text-align:center;
+font-weight:bold;
+}
