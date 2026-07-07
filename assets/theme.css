@@ -1714,3 +1714,49 @@ font-size:24px;
 
 
    }
+
+#stickyCart{
+
+position:fixed;
+
+bottom:15px;
+
+left:15px;
+
+right:15px;
+
+background:#fff;
+
+padding:12px 15px;
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+z-index:999;
+
+}
+
+
+
+#stickyCart button{
+
+background:#8b6f47;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:25px;
+
+font-weight:bold;
+
+}
