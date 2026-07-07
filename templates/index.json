@@ -13,44 +13,42 @@
       "type": "hero",
       "settings": {}
     },
-
     "categories": {
       "type": "categories",
       "settings": {}
     },
-
     "home_products": {
       "type": "category-products",
       "settings": {
-        "title": "🏠 Home Improvement"
+        "title": "🏠 Home Improvement",
+        "collection": "home-improvement"
       }
     },
-
     "electronics_products": {
       "type": "category-products",
       "settings": {
-        "title": "📱 Electronics"
+        "title": "Electronics & Hardware Accessories",
+        "collection": "electronics"
       }
     },
-
     "beauty_products": {
       "type": "category-products",
       "settings": {
-        "title": "💄 Beauty & Personal Care"
+        "title": "💄 Beauty & Personal Care",
+        "collection": "beauty-personal-care"
       }
     },
-
     "why_choose": {
       "type": "why-choose",
-      "settings": {}
+      "settings": {
+        "heading": "Why Choose Nova Select?"
+      }
     },
-
     "newsletter": {
       "type": "newsletter",
       "settings": {}
     }
   },
-
   "order": [
     "hero",
     "categories",
