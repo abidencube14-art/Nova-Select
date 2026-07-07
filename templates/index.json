@@ -13,27 +13,50 @@
       "type": "hero",
       "settings": {}
     },
+
     "categories": {
       "type": "categories",
       "settings": {}
     },
-    "featured_products": {
-      "type": "featured-products",
-      "settings": {}
+
+    "home_products": {
+      "type": "category-products",
+      "settings": {
+        "title": "🏠 Home Improvement"
+      }
     },
+
+    "electronics_products": {
+      "type": "category-products",
+      "settings": {
+        "title": "📱 Electronics"
+      }
+    },
+
+    "beauty_products": {
+      "type": "category-products",
+      "settings": {
+        "title": "💄 Beauty & Personal Care"
+      }
+    },
+
     "why_choose": {
       "type": "why-choose",
       "settings": {}
     },
+
     "newsletter": {
       "type": "newsletter",
       "settings": {}
     }
   },
+
   "order": [
     "hero",
     "categories",
-    "featured_products",
+    "home_products",
+    "electronics_products",
+    "beauty_products",
     "why_choose",
     "newsletter"
   ]
