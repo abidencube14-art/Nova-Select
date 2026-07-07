@@ -170,11 +170,3 @@ sticky.style.display = "flex";
 sticky.style.display = "none";
 }
 });
-
-function closeFunnel(){
-document.getElementById("funnelPopup").style.display="none";
-}
-
-setTimeout(()=>{
-document.getElementById("funnelPopup").style.display="flex";
-},5000);
