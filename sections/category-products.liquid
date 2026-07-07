@@ -1,0 +1,121 @@
+<section class="category-products">
+
+  <div class="category-header">
+    <h2>{{ section.settings.title }}</h2>
+    <a href="{{ section.settings.collection.url }}">
+      View more →
+    </a>
+  </div>
+
+  <div class="product-scroll">
+
+    {% for product in section.settings.collection.products limit: 5 %}
+
+      <div class="small-product-card">
+
+        <a href="{{ product.url }}">
+          <img 
+          src="{{ product.featured_image | image_url: width: 400 }}"
+          alt="{{ product.title }}">
+        </a>
+
+        <h3>{{ product.title }}</h3>
+
+        <p>
+          {{ product.price | money }}
+        </p>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<style>
+
+.category-products{
+padding:40px 20px;
+}
+
+.category-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.category-header h2{
+font-size:26px;
+}
+
+.category-header a{
+text-decoration:none;
+color:#8b6f47;
+}
+
+
+.product-scroll{
+display:flex;
+gap:16px;
+overflow-x:auto;
+scroll-behavior:smooth;
+}
+
+.product-scroll::-webkit-scrollbar{
+display:none;
+}
+
+
+.small-product-card{
+min-width:160px;
+}
+
+
+.small-product-card img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:15px;
+}
+
+
+.small-product-card h3{
+font-size:15px;
+margin-top:10px;
+}
+
+
+.small-product-card p{
+font-weight:bold;
+color:#8b6f47;
+}
+
+</style>
+
+
+{% schema %}
+{
+"name":"Category Products",
+"settings":[
+{
+"type":"text",
+"id":"title",
+"label":"Category title",
+"default":"Featured"
+},
+{
+"type":"collection",
+"id":"collection",
+"label":"Choose collection"
+}
+],
+"presets":[
+{
+"name":"Category Products"
+}
+]
+}
+{% endschema %}
