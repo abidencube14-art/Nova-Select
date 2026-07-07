@@ -1,99 +1,94 @@
 <section class="category-products">
 
-  <div class="category-header">
-    <h2>{{ section.settings.title }}</h2>
-    <a href="{{ section.settings.collection.url }}">
-      View more →
-    </a>
-  </div>
+<div class="category-header">
 
-  <div class="product-scroll">
+<h2>{{ section.settings.title }}</h2>
 
-    {% for product in section.settings.collection.products limit: 5 %}
+<a href="{{ section.settings.collection.url }}">
+View all →
+</a>
 
-      <div class="small-product-card">
+</div>
 
-        <a href="{{ product.url }}">
-          <img 
-          src="{{ product.featured_image | image_url: width: 400 }}"
-          alt="{{ product.title }}">
-        </a>
 
-        <h3>{{ product.title }}</h3>
+<div class="carousel-wrapper">
 
-        <p>
-          {{ product.price | money }}
-        </p>
+<button class="carousel-btn left" onclick="scrollProducts(this, -1)">
+‹
+</button>
 
-      </div>
 
-    {% endfor %}
+<div class="product-scroll">
 
-  </div>
+
+{% for product in section.settings.collection.products limit:10 %}
+
+<div class="small-product-card">
+
+
+<div class="product-image-box">
+
+{% if forloop.index <= 2 %}
+<span class="badge">
+🔥 Trending
+</span>
+{% endif %}
+
+
+<a href="{{ product.url }}">
+
+<img 
+src="{{ product.featured_image | image_url: width:400 }}"
+alt="{{ product.title }}">
+
+</a>
+
+</div>
+
+
+<h3>
+{{ product.title }}
+</h3>
+
+
+<p>
+{{ product.price | money }}
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+<button class="carousel-btn right" onclick="scrollProducts(this, 1)">
+›
+</button>
+
+
+</div>
 
 </section>
 
 
-<style>
+<script>
 
-.category-products{
-padding:40px 20px;
+function scrollProducts(button, direction){
+
+let container = button.parentElement.querySelector('.product-scroll');
+
+container.scrollBy({
+left: direction * 250,
+behavior:'smooth'
+});
+
 }
 
-.category-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
-}
-
-.category-header h2{
-font-size:26px;
-}
-
-.category-header a{
-text-decoration:none;
-color:#8b6f47;
-}
-
-
-.product-scroll{
-display:flex;
-gap:16px;
-overflow-x:auto;
-scroll-behavior:smooth;
-}
-
-.product-scroll::-webkit-scrollbar{
-display:none;
-}
-
-
-.small-product-card{
-min-width:160px;
-}
-
-
-.small-product-card img{
-width:160px;
-height:160px;
-object-fit:cover;
-border-radius:15px;
-}
-
-
-.small-product-card h3{
-font-size:15px;
-margin-top:10px;
-}
-
-
-.small-product-card p{
-font-weight:bold;
-color:#8b6f47;
-}
-
-</style>
+</script>
 
 
 {% schema %}
@@ -103,8 +98,7 @@ color:#8b6f47;
 {
 "type":"text",
 "id":"title",
-"label":"Category title",
-"default":"Featured"
+"label":"Category title"
 },
 {
 "type":"collection",
