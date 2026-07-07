@@ -17,10 +17,6 @@
 "type": "category-banner",
 "settings": {}
 },
-    "categories": {
-      "type": "categories",
-      "settings": {}
-    },
     "home_products": {
       "type": "category-products",
       "settings": {
@@ -56,7 +52,6 @@
   "order": [
     "hero",
     "category_banner",
-    "categories",
     "home_products",
     "electronics_products",
     "beauty_products",
