@@ -13,6 +13,10 @@
       "type": "hero",
       "settings": {}
     },
+    "category_banner": {
+"type": "category-banner",
+"settings": {}
+},
     "categories": {
       "type": "categories",
       "settings": {}
@@ -51,6 +55,7 @@
   },
   "order": [
     "hero",
+    "category_banner",
     "categories",
     "home_products",
     "electronics_products",
