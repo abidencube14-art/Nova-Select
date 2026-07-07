@@ -1003,3 +1003,82 @@ text-align:center;
 .checkout-urgency{
   color: #7a1f1f;
 }
+
+/* Luxury category product rows */
+
+.category-products {
+  padding: 35px 20px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.category-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d241c;
+}
+
+.category-header a {
+  color: #8b6f47;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+.product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+.small-product-card {
+  min-width: 160px;
+  max-width: 160px;
+  scroll-snap-align: start;
+}
+
+
+.small-product-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform .3s ease;
+}
+
+
+.small-product-card:hover img {
+  transform: scale(1.05);
+}
+
+
+.small-product-card h3 {
+  font-size: 15px;
+  line-height: 1.3;
+  margin: 10px 0 5px;
+  color: #2d241c;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.small-product-card p {
+  font-size: 17px;
+  font-weight: 700;
+  color: #8b6f47;
+   }
