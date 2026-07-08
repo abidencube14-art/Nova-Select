@@ -166,19 +166,42 @@ setInterval(updateTimer, 1000);
 
 <h2>You may also like</h2>
 
-<div class="rec-grid">
+<div class="rec-scroll">
 
-{% for product in collections.all.products limit:4 %}
 
-<div class="rec-item">
+{% for product in collections.all.products limit:8 %}
+
+<div class="rec-card">
+
 <a href="{{ product.url }}">
-<img src="{{ product.featured_image | img_url: '300x' }}">
-<p>{{ product.title }}</p>
-<p>{{ product.price | money }}</p>
-</a>
+
+<div class="rec-image">
+
+<img 
+src="{{ product.featured_image | image_url: width:400 }}"
+alt="{{ product.title }}"
+>
+
 </div>
 
+
+<h3>
+{{ product.title }}
+</h3>
+
+
+<p>
+{{ product.price | money }}
+</p>
+
+
+</a>
+
+</div>
+
+
 {% endfor %}
+
 
 </div>
 
