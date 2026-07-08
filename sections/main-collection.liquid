@@ -1,0 +1,63 @@
+<section class="collection-page">
+
+<div class="collection-header">
+
+<h1>{{ collection.title }}</h1>
+
+<p>
+Discover our premium {{ collection.title }} products.
+</p>
+
+</div>
+
+
+<div class="collection-grid">
+
+
+{% for product in collection.products %}
+
+<div class="collection-card">
+
+<a href="{{ product.url }}">
+
+<img 
+src="{{ product.featured_image | image_url: width:500 }}"
+alt="{{ product.title }}"
+>
+
+
+<h3>
+{{ product.title }}
+</h3>
+
+
+<p>
+{{ product.price | money }}
+</p>
+
+
+</a>
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+</section>
+
+
+
+{% schema %}
+{
+"name":"Main Collection",
+"settings":[],
+"presets":[
+{
+"name":"Main Collection"
+}
+]
+}
+{% endschema %}
