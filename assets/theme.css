@@ -52,51 +52,45 @@ font-weight:600;
 
 
 .site-header{
-
-background:#f8f1e7;
-
+background:#fff;
+padding:14px 20px;
+border-bottom:1px solid #ececec;
 position:sticky;
-
 top:0;
-
-z-index:1000;
-
-box-shadow:0 4px 15px rgba(0,0,0,.06);
-
+z-index:999;
 }
 
-
-
-.header-container{
-
-display:flex;
-
-justify-content:space-between;
-
+.header-inner{
+display:grid;
+grid-template-columns:60px 1fr 120px;
 align-items:center;
-
-max-width:1200px;
-
-margin:auto;
-
-padding:18px 20px;
-
 }
 
+.left-side{
+justify-self:start;
+}
 
+.center-logo{
+justify-self:center;
+}
 
-.logo{
+.right-side{
+justify-self:end;
+display:flex;
+gap:18px;
+align-items:center;
+}
 
-font-size:28px;
+.logo-img{
+height:48px;
+width:auto;
+}
 
-font-weight:700;
-
-letter-spacing:1px;
-
-text-decoration:none;
-
-color:#8b6f47;
-
+.menu-btn{
+background:none;
+border:none;
+font-size:34px;
+cursor:pointer;
 }
 
 
