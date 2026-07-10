@@ -4,7 +4,34 @@
 
 <header class="site-header">
 
-<div class="header-container">
+<div class="header-inner">
+
+<div class="left-side">
+<button class="menu-btn">☰</button>
+</div>
+
+<div class="center-logo">
+<a href="/">
+<img src="{{ 'nova-logo.png' | asset_url }}" class="logo-img">
+</a>
+</div>
+
+<div class="right-side">
+
+<a href="/search">🔍</a>
+
+<a href="/account">👤</a>
+
+<a href="/cart">
+🛍
+<span id="cart-count"></span>
+</a>
+
+</div>
+
+</div>
+
+</header>
 
 <!-- LOGO -->
 <a href="/" class="logo">
