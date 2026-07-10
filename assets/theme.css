@@ -49,51 +49,49 @@ font-weight:600;
 
 }
 
-
-
 .site-header{
-background:#fff;
-padding:14px 20px;
-border-bottom:1px solid #ececec;
+
+background:#f8f1e7;
+
 position:sticky;
+
 top:0;
-z-index:999;
+
+z-index:1000;
+
+box-shadow:0 4px 15px rgba(0,0,0,.06);
+
 }
 
-.header-inner{
-display:grid;
-grid-template-columns:60px 1fr 120px;
-align-items:center;
-}
+.header-container{
 
-.left-side{
-justify-self:start;
-}
-
-.center-logo{
-justify-self:center;
-}
-
-.right-side{
-justify-self:end;
 display:flex;
-gap:18px;
+
+justify-content:space-between;
+
 align-items:center;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:18px 20px;
+
 }
 
-.logo-img{
-height:48px;
-width:auto;
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+text-decoration:none;
+
+color:#8b6f47;
+
 }
-
-.menu-btn{
-background:none;
-border:none;
-font-size:34px;
-cursor:pointer;
-}
-
-
 
 .nav-links{
 
