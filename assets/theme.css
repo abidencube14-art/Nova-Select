@@ -62,7 +62,7 @@ z-index:999;
 
 .header-inner{
 display:grid;
-grid-template-columns:40px 1fr 110px;
+grid-template-columns:50px 1fr 120px;
 align-items:center;
 padding:0 20px;
 }
@@ -2036,23 +2036,6 @@ height:150px;
 }
 
 /* LUXURY LOGO */
-
-.logo{
-display:flex;
-align-items:center;
-text-decoration:none;
-}
-
-.logo-image{
-height:52px;
-width:auto;
-display:block;
-transition:.3s ease;
-}
-
-.logo-image:hover{
-transform:scale(1.03);
-}
 
 
 @media(max-width:768px){
