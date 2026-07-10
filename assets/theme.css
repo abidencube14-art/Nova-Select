@@ -52,17 +52,45 @@ font-weight:600;
 
 
 .site-header{
-
-background:#f8f1e7;
-
+background:#fff;
+padding:14px 20px;
+border-bottom:1px solid #ececec;
 position:sticky;
-
 top:0;
+z-index:999;
+}
 
-z-index:1000;
+.header-inner{
+display:grid;
+grid-template-columns:60px 1fr 120px;
+align-items:center;
+}
 
-box-shadow:0 4px 15px rgba(0,0,0,.06);
+.left-side{
+justify-self:start;
+}
 
+.center-logo{
+justify-self:center;
+}
+
+.right-side{
+justify-self:end;
+display:flex;
+gap:18px;
+align-items:center;
+}
+
+.logo-img{
+height:48px;
+width:auto;
+}
+
+.menu-btn{
+background:none;
+border:none;
+font-size:34px;
+cursor:pointer;
 }
 
 
