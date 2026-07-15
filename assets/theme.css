@@ -62,7 +62,7 @@ font-weight:600;
     grid-template-columns:50px 1fr 120px;
     align-items:center;
     padding:6px 20px;
-    min-height:60px;
+    min-height:56px;
 }
 
 .left-side{
@@ -84,9 +84,11 @@ align-items:center;
 }
 
 .logo-img{
-    height:109px;
+    height:60px;
     width:auto;
     display:block;
+    transform:scale(1.35);
+    transform-origin:center;
 }
 
 .menu-btn{
