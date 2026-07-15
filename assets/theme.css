@@ -2098,3 +2098,50 @@ body{
     font-weight:700;
     line-height:1;
 }
+
+.search-page{
+    max-width:700px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.search-page h1{
+    font-size:34px;
+    text-align:center;
+    color:#1f2937;
+    margin-bottom:25px;
+}
+
+.search-page form{
+    display:flex;
+    gap:12px;
+}
+
+.search-page input[type="search"]{
+    flex:1;
+    height:52px;
+    border:2px solid #e5e5e5;
+    border-radius:14px;
+    padding:0 18px;
+    font-size:16px;
+    background:#fff;
+}
+
+.search-page input[type="search"]:focus{
+    outline:none;
+    border-color:#8b6f47;
+}
+
+.search-page button{
+    background:#1f2937;
+    color:#fff;
+    border:none;
+    border-radius:14px;
+    padding:0 26px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.search-page button:hover{
+    background:#8b6f47;
+}
