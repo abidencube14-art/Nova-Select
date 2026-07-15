@@ -170,3 +170,65 @@ sticky.style.display = "flex";
 sticky.style.display = "none";
 }
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const searchInput = document.getElementById("search-input");
+const resultsBox = document.getElementById("search-results");
+
+if(!searchInput) return;
+
+
+searchInput.addEventListener("input", function(){
+
+let query = this.value.trim();
+
+
+if(query.length < 1){
+resultsBox.innerHTML = "";
+return;
+}
+
+
+fetch(`/search/suggest.json?q=${query}&resources[type]=product&resources[limit]=5`)
+.then(response => response.json())
+.then(data => {
+
+
+let products = data.resources.results.products;
+
+
+resultsBox.innerHTML = "";
+
+
+products.forEach(product => {
+
+
+let item = document.createElement("a");
+
+item.href = product.url;
+
+item.className = "predictive-item";
+
+
+item.innerHTML = `
+
+<img src="${product.image}" />
+
+<span>${product.title}</span>
+
+`;
+
+
+resultsBox.appendChild(item);
+
+
+});
+
+
+});
+
+});
+
+
+});
