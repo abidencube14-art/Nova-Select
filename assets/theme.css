@@ -2145,3 +2145,106 @@ body{
 .search-page button:hover{
     background:#8b6f47;
 }
+
+/* SEARCH PAGE */
+
+.main-search{
+    background:#fffaf2;
+    padding:50px 20px;
+}
+
+.search-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.search-container h1{
+    text-align:center;
+    font-size:36px;
+    color:#111827;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    gap:12px;
+}
+
+.search-box input{
+    flex:1;
+    height:55px;
+    border-radius:14px;
+    border:1px solid #ddd;
+    padding:0 20px;
+    font-size:17px;
+}
+
+.search-box button{
+    border:none;
+    border-radius:14px;
+    padding:0 30px;
+    background:#111827;
+    color:white;
+    font-size:16px;
+}
+
+.search-products{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.search-results-title{
+    margin-top:40px;
+}
+
+.no-results{
+    text-align:center;
+    font-size:18px;
+}
+
+
+@media(max-width:768px){
+
+.search-box{
+    flex-direction:column;
+}
+
+.search-box button{
+    height:50px;
+}
+
+.search-products{
+    grid-template-columns:1fr;
+}
+
+.search-container h1{
+    font-size:28px;
+}
+
+}
+
+.search-submit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:#111827;
+    color:white;
+    border:none;
+    border-radius:14px;
+    padding:0 25px;
+    cursor:pointer;
+}
+
+.search-submit svg{
+    width:20px;
+    height:20px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.search-submit:hover{
+    background:#8b6f47;
+   }
