@@ -55,14 +55,15 @@ font-weight:600;
     background:#fffaf2;
     padding-top: 4px;
     padding-bottom: 4px;
+    width:100%;
+    overflow:hidden;
 }
 
 .header-inner{
     display:grid;
-    grid-template-columns:50px 3fr 120px;
+    grid-template-columns:50px 1fr auto;
     align-items:center;
-    padding:6px 20px;
-    min-height:56px;
+    width:100%;
 }
 
 .left-side{
@@ -77,10 +78,11 @@ justify-self:start;
 }
 
 .right-side{
-justify-self:end;
-display:flex;
-gap:18px;
-align-items:center;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    justify-self:end;
+    margin-right:10px;
 }
 
 .logo-img{
@@ -2046,4 +2048,10 @@ height:150px;
 height:40px;
 }
 
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
 }
