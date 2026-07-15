@@ -59,7 +59,7 @@ font-weight:600;
 
 .header-inner{
     display:grid;
-    grid-template-columns:50px 2fr 120px;
+    grid-template-columns:50px 3fr 120px;
     align-items:center;
     padding:6px 20px;
     min-height:56px;
@@ -84,9 +84,9 @@ align-items:center;
 }
 
 .logo-img{
-    height: 60px;
+    height: 65px;
     width: auto;
-    max-width: 280px;
+    max-width: 320px;
     object-fit: contain;
 }
 
