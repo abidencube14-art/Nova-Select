@@ -2,17 +2,24 @@
 
   <div class="search-container">
 
-    <h1>Search Nova Select</h1>
+    <h1>Search For Your Desired Product</h1>
 
     <form action="/search" method="get" role="search">
       
       <div class="search-box">
-        <input
-          type="search"
-          name="q"
-          value="{{ search.terms | escape }}"
-          placeholder="Search products..."
-        >
+        <div class="predictive-search-wrapper">
+
+<input
+id="search-input"
+type="search"
+name="q"
+autocomplete="off"
+placeholder="Search Nova Select..."
+>
+
+<div id="search-results" class="predictive-results"></div>
+
+</div>
 
         <button type="submit" class="search-submit">
 
