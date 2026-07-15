@@ -190,7 +190,7 @@ return;
 }
 
 
-fetch(`/search/suggest.json?q=${query}&resources[type]=product&resources[limit]=5`)
+fetch(`/search/suggest.json?q=${query}&resources[type]=product&resources[limit]=6`)
 .then(response => response.json())
 .then(data => {
 
@@ -204,29 +204,35 @@ resultsBox.innerHTML = "";
 products.forEach(product => {
 
 
-let item = document.createElement("a");
+let card = document.createElement("a");
 
-item.href = product.url;
+card.href = product.url;
 
-item.className = "predictive-item";
+card.className = "predictive-card";
 
 
-item.innerHTML = `
+card.innerHTML = `
 
-<img src="${product.image}" />
+<img src="${product.image}" alt="${product.title}">
 
-<span>${product.title}</span>
+<div class="predictive-info">
+
+<h4>${product.title}</h4>
+
+<p>${product.price}</p>
+
+</div>
 
 `;
 
+resultsBox.appendChild(card);
 
-resultsBox.appendChild(item);
+
+});
 
 
 });
 
-
-});
 
 });
 
