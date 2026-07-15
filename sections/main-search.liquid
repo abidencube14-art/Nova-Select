@@ -2,75 +2,54 @@
 
   <div class="search-container">
 
-    <h1>Search For Your Desired Product</h1>
+<h1>Search Nova Select</h1>
 
-    <form action="/search" method="get" role="search">
-      
-      <div class="search-box">
-        <div class="predictive-search-wrapper">
+<form action="/search" method="get" role="search" class="search-form">
+
+<div class="search-input-wrapper">
 
 <input
 id="search-input"
 type="search"
 name="q"
+value="{{ search.terms | escape }}"
 autocomplete="off"
-placeholder="Search Nova Select..."
+placeholder="Search products..."
 >
 
-<div id="search-results" class="predictive-results"></div>
+<button type="submit" class="search-icon-btn">
+
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="11" cy="11" r="7"></circle>
+<line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+</svg>
+
+</button>
 
 </div>
 
-        <button type="submit" class="search-submit">
 
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-  <circle cx="11" cy="11" r="7"></circle>
-  <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
-</svg>
-
-<span>Search</span>
-
-</button>
-      </div>
-
-    </form>
+<div id="search-results" class="predictive-results"></div>
 
 
-    {% if search.performed %}
-
-      <h2 class="search-results-title">
-        Results for "{{ search.terms }}"
-      </h2>
+</form>
 
 
-      {% if search.results.size > 0 %}
+{% if search.performed %}
 
-        <div class="search-products">
+<div class="search-products">
 
-          {% for item in search.results %}
+{% for product in search.results %}
 
-            {% if item.object_type == 'product' %}
+{% render 'product-card', product: product %}
 
-              {% render 'product-card', product:item %}
+{% endfor %}
 
-            {% endif %}
+</div>
 
-          {% endfor %}
-
-        </div>
-
-      {% else %}
-
-        <p class="no-results">
-          No products found. Try another search.
-        </p>
-
-      {% endif %}
+{% endif %}
 
 
-    {% endif %}
-
-
-  </div>
+</div>
 
 </section>
