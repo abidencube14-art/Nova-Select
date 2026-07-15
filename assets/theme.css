@@ -2055,3 +2055,46 @@ body{
     width:100%;
     overflow-x:hidden;
 }
+
+/* Premium Header Icons */
+
+.icon-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#222;
+    position:relative;
+}
+
+.icon-link:hover{
+    color:#8b6f47;
+}
+
+.icon-link svg{
+    width:24px;
+    height:24px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.cart-icon{
+    position:relative;
+}
+
+#cart-count{
+    position:absolute;
+    top:-6px;
+    right:-8px;
+    background:#111827;
+    color:#fff;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    line-height:1;
+}
