@@ -189,6 +189,17 @@ resultsBox.innerHTML = "";
 return;
 }
 
+  const searchForm = document.querySelector(".search-form");
+
+if(searchForm){
+
+searchForm.addEventListener("submit",function(){
+
+document.getElementById("search-results").innerHTML="";
+
+});
+
+}
 
 fetch(`/search/suggest.json?q=${query}&resources[type]=product&resources[limit]=6`)
 .then(response => response.json())
