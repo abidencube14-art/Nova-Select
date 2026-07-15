@@ -2278,10 +2278,8 @@ z-index:999;
 
 position:absolute;
 
-top:65px;
-
+top:60px;
 left:0;
-
 right:0;
 
 background:#fffaf2;
@@ -2298,10 +2296,9 @@ flex-direction:column;
 
 gap:10px;
 
-z-index:999;
+z-index:20;
 
 }
-
 
 .predictive-card{
 
@@ -2455,4 +2452,14 @@ grid-template-columns:1fr 1fr;
 
 }
 
+}
+
+.search-input-wrapper{
+position:relative;
+z-index:30;
+}
+
+.site-header{
+position:relative;
+z-index:100;
 }
