@@ -18,13 +18,27 @@
 
 <div class="right-side">
 
-<a href="/search">🔍</a>
+<a href="/search" class="icon-link" aria-label="Search">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="11" cy="11" r="7"></circle>
+    <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+  </svg>
+</a>
 
-<a href="/account">👤</a>
+<a href="/account" class="icon-link" aria-label="Account">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="8" r="4"></circle>
+    <path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path>
+  </svg>
+</a>
 
-<a href="/cart">
-🛍
-<span id="cart-count"></span>
+<a href="/cart" class="icon-link cart-icon" aria-label="Cart">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="9" cy="20" r="1"></circle>
+    <circle cx="18" cy="20" r="1"></circle>
+    <path d="M2 2h3l2.5 12h11l2-8H6"></path>
+  </svg>
+  <span id="cart-count">{{ cart.item_count }}</span>
 </a>
 
 </div>
