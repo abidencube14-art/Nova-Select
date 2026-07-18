@@ -145,60 +145,94 @@ document.getElementById("cart-count").innerText = cart.item_count;
 
 <div id="sideMenu" class="side-menu">
 
-<div class="menu-header">
-<h2>Nova Select</h2>
-<button onclick="toggleMenu()">✕</button>
+  <div class="menu-header">
+    <img src="{{ 'nova-logo.png' | asset_url }}" class="menu-logo" alt="Nova Select Logo">
+    <h2>Nova Select</h2>
+    <p>Premium Shopping</p>
+  </div>
+
+  <a href="/">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 10.5L12 3l9 7.5"></path>
+      <path d="M5 9.5V21h14V9.5"></path>
+    </svg>
+    <span>Home</span>
+  </a>
+
+  <a href="/collections/all">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 2l1.5 4h9L18 2"></path>
+      <path d="M5 6h14l-1 13H6L5 6z"></path>
+    </svg>
+    <span>All Products</span>
+  </a>
+
+  <a href="/collections/all?sort_by=best-selling">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2l2.5 5L20 8l-4 4 .8 6L12 15l-4.8 3 .8-6-4-4 5.5-1z"></path>
+    </svg>
+    <span>Top Selling Products</span>
+  </a>
+
+  <a href="/collections/all?sort_by=created-descending">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 16l5-5 4 4 7-7"></path>
+      <path d="M20 8v5h-5"></path>
+    </svg>
+    <span>Trending Products</span>
+  </a>
+
+  <div class="menu-title">Categories</div>
+
+  <a href="/collections/home-improvement">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 10.5L12 3l9 7.5"></path>
+      <path d="M5 9.5V21h14V9.5"></path>
+    </svg>
+    <span>Home Improvement</span>
+  </a>
+
+  <a href="/collections/electronics">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="4" y="5" width="16" height="11" rx="1"></rect>
+      <path d="M8 19h8"></path>
+    </svg>
+    <span>Electronics & Hardware</span>
+  </a>
+
+  <a href="/collections/beauty-personal-care">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 3l1.6 3.8L18 8.4l-3 2.7.8 4.2L12 13.6l-3.8 1.7.8-4.2-3-2.7 4.4-.6z"></path>
+    </svg>
+    <span>Beauty & Personal Care</span>
+  </a>
+
+  <hr>
+
+  <a href="/pages/about-us">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M12 16v-4"></path>
+      <path d="M12 8h.01"></path>
+    </svg>
+    <span>About Us</span>
+  </a>
+
+  <a href="/pages/faq">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M9.5 9a2.5 2.5 0 015 0c0 2-2.5 2-2.5 4"></path>
+      <path d="M12 17h.01"></path>
+    </svg>
+    <span>FAQ</span>
+  </a>
+
+  <a href="#newsletter">
+    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+      <path d="M3 7l9 6 9-6"></path>
+    </svg>
+    <span>Subscribe For Exclusive Products</span>
+  </a>
+
 </div>
-
-<a href="/">🏠 Home</a>
-
-<a href="/collections/all">🛍 All Products</a>
-
-<a href="/collections/top-selling">🔥 Top Selling</a>
-
-<a href="/collections/trending">📈 Trending</a>
-
-<div class="menu-title">
-Categories
-</div>
-
-<a href="/collections/home-improvement">
-🏡 Home Improvement
-</a>
-
-<a href="/collections/electronics">
-💻 Electronics & Hardware
-</a>
-
-<a href="/collections/beauty-personal-care">
-💄 Beauty & Personal Care
-</a>
-
-<hr>
-
-<a href="/pages/about">
-ℹ️ About Us
-</a>
-
-<a href="/pages/faq">
-❓ FAQ
-</a>
-
-<a href="/apps/parcelpanel">
-📦 Track Order
-</a>
-
-<a href="/pages/contact">
-📞 Contact
-</a>
-
-<hr>
-
-<a href="#newsletter">
-✉️ Subscribe
-</a>
-
-</div>
-
-<div id="menuOverlay" class="menu-overlay"
-onclick="toggleMenu()"></div>
