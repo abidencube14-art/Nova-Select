@@ -2635,3 +2635,41 @@ body.menu-open{
     font-weight:700;
     letter-spacing:1px;
 }
+
+/* Force Nova Select Light Theme */
+
+:root{
+    color-scheme:light;
+}
+
+html{
+    color-scheme:light;
+}
+
+body{
+    background:#fffaf2;
+    color:#1b2138;
+}
+
+
+/* Prevent browser dark mode changes */
+
+@media (prefers-color-scheme: dark){
+
+    html{
+        background:#fffaf2;
+    }
+
+    body{
+        background:#fffaf2;
+        color:#1b2138;
+    }
+
+    .side-menu,
+    .site-header,
+    .menu-header{
+        background:#fffaf2;
+        color:#1b2138;
+    }
+
+       }
