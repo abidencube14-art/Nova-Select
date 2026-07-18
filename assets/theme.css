@@ -2654,8 +2654,6 @@ body{
 
 /* Prevent browser dark mode changes */
 
-@media (prefers-color-scheme: dark){
-
     html{
         background:#fffaf2;
     }
