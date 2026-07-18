@@ -2462,3 +2462,133 @@ z-index:100;
     position:relative;
     z-index:10;
 }
+
+/* ==========================
+   NOVA SELECT PREMIUM MENU
+========================== */
+
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-320px;
+    width:300px;
+    height:100%;
+    background:#fffaf2;
+    overflow-y:auto;
+    transition:left .35s ease;
+    z-index:9999;
+    box-shadow:6px 0 30px rgba(0,0,0,.15);
+    padding-bottom:40px;
+}
+
+.side-menu.open{
+    left:0;
+}
+
+.menu-header{
+    text-align:center;
+    padding:30px 20px;
+    border-bottom:1px solid #ece2cf;
+    background:#fffaf2;
+}
+
+.menu-logo{
+    width:140px;
+    max-width:100%;
+    display:block;
+    margin:0 auto 12px;
+}
+
+.menu-header h2{
+    margin:0;
+    font-size:24px;
+    color:#1b2138;
+    font-weight:700;
+}
+
+.menu-header p{
+    margin-top:6px;
+    font-size:14px;
+    color:#777;
+}
+
+.menu-title{
+    padding:20px 22px 8px;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#9d8c69;
+}
+
+.side-menu a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px 22px;
+    text-decoration:none;
+    color:#1b2138;
+    font-size:16px;
+    font-weight:500;
+    transition:all .25s ease;
+}
+
+.side-menu a:hover{
+    background:#f5ecdd;
+    padding-left:30px;
+    color:#8b6f47;
+}
+
+.menu-icon{
+    width:22px;
+    height:22px;
+    stroke:#1b2138;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    fill:none;
+    flex-shrink:0;
+    transition:.25s;
+}
+
+.side-menu a:hover .menu-icon{
+    stroke:#8b6f47;
+}
+
+.side-menu hr{
+    border:none;
+    border-top:1px solid #ece2cf;
+    margin:18px 20px;
+}
+
+/* Scrollbar */
+
+.side-menu::-webkit-scrollbar{
+    width:6px;
+}
+
+.side-menu::-webkit-scrollbar-track{
+    background:#fffaf2;
+}
+
+.side-menu::-webkit-scrollbar-thumb{
+    background:#d8c8ad;
+    border-radius:20px;
+}
+
+/* Overlay */
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:9998;
+}
+
+.menu-overlay.show{
+    opacity:1;
+    visibility:visible;
+   }
