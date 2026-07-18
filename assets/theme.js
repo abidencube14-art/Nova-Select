@@ -252,18 +252,43 @@ resultsBox.appendChild(card);
 
 function toggleMenu(){
 
-const menu = document.getElementById("sideMenu");
-const overlay = document.getElementById("menuOverlay");
+    const menu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("menuOverlay");
 
-menu.classList.toggle("open");
-overlay.classList.toggle("show");
+    if(!menu || !overlay) return;
 
-if(menu.classList.contains("open")){
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-}else{
-    document.body.style.overflow = "";
-    document.documentElement.style.overflow = "";
+    menu.classList.toggle("open");
+    overlay.classList.toggle("show");
+
+    document.body.classList.toggle("menu-open");
 }
 
-                 }
+
+// Close menu when overlay is clicked
+document.addEventListener("click", function(e){
+
+    const overlay = document.getElementById("menuOverlay");
+
+    if(e.target === overlay){
+
+        document.getElementById("sideMenu").classList.remove("open");
+        overlay.classList.remove("show");
+        document.body.classList.remove("menu-open");
+
+    }
+
+});
+
+
+// Always start closed after refresh
+window.addEventListener("load", function(){
+
+    const menu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("menuOverlay");
+
+    if(menu) menu.classList.remove("open");
+    if(overlay) overlay.classList.remove("show");
+
+    document.body.classList.remove("menu-open");
+
+});
