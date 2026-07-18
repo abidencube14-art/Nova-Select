@@ -2471,15 +2471,24 @@ z-index:100;
 .side-menu{
     position:fixed;
     top:0;
-    left:-320px;
-    width:300px;
-    height:100%;
+    left:-85%;
+    width:85%;
+    max-width:340px;
+    height:100vh;
+
     background:#fffaf2;
+
     overflow-y:auto;
+    overflow-x:hidden;
+
+    border-top-right-radius:28px;
+    border-bottom-right-radius:28px;
+
+    box-shadow:8px 0 35px rgba(0,0,0,.18);
+
     transition:left .35s ease;
+
     z-index:9999;
-    box-shadow:6px 0 30px rgba(0,0,0,.15);
-    padding-bottom:40px;
 }
 
 .side-menu.open{
@@ -2487,17 +2496,18 @@ z-index:100;
 }
 
 .menu-header{
-    text-align:center;
-    padding:30px 20px;
-    border-bottom:1px solid #ece2cf;
     background:#fffaf2;
+    text-align:center;
+    padding:28px 20px 20px;
+    border-bottom:1px solid #ece3d2;
 }
 
 .menu-logo{
-    width:140px;
+    width:220px;
     max-width:100%;
     display:block;
-    margin:0 auto 12px;
+    margin:0 auto;
+    filter:brightness(.98);
 }
 
 .menu-header h2{
@@ -2582,7 +2592,7 @@ z-index:100;
 .menu-overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.25);
     opacity:0;
     visibility:hidden;
     transition:.3s;
@@ -2592,4 +2602,4 @@ z-index:100;
 .menu-overlay.show{
     opacity:1;
     visibility:visible;
-   }
+}
