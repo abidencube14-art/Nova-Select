@@ -7,7 +7,9 @@
 <div class="header-inner">
 
 <div class="left-side">
-<button class="menu-btn">☰</button>
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
 </div>
 
 <div class="center-logo">
@@ -140,3 +142,63 @@ document.getElementById("cart-count").innerText = cart.item_count;
 });
 
 </script>
+
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<h2>Nova Select</h2>
+<button onclick="toggleMenu()">✕</button>
+</div>
+
+<a href="/">🏠 Home</a>
+
+<a href="/collections/all">🛍 All Products</a>
+
+<a href="/collections/top-selling">🔥 Top Selling</a>
+
+<a href="/collections/trending">📈 Trending</a>
+
+<div class="menu-title">
+Categories
+</div>
+
+<a href="/collections/home-improvement">
+🏡 Home Improvement
+</a>
+
+<a href="/collections/electronics">
+💻 Electronics & Hardware
+</a>
+
+<a href="/collections/beauty-personal-care">
+💄 Beauty & Personal Care
+</a>
+
+<hr>
+
+<a href="/pages/about">
+ℹ️ About Us
+</a>
+
+<a href="/pages/faq">
+❓ FAQ
+</a>
+
+<a href="/apps/parcelpanel">
+📦 Track Order
+</a>
+
+<a href="/pages/contact">
+📞 Contact
+</a>
+
+<hr>
+
+<a href="#newsletter">
+✉️ Subscribe
+</a>
+
+</div>
+
+<div id="menuOverlay" class="menu-overlay"
+onclick="toggleMenu()"></div>
