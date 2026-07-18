@@ -67,7 +67,8 @@ font-weight:600;
 }
 
 .left-side{
-justify-self:start;
+    justify-self:start;
+    padding-left:18px;
 }
 
 .center-logo{
