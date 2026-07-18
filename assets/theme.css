@@ -2491,32 +2491,24 @@ box-shadow:8px 0 30px rgba(0,0,0,0.15);
 }
 
 .menu-header{
-    background:#fffaf2;
     text-align:center;
-    padding:28px 20px 20px;
-    border-bottom:1px solid #ece3d2;
-}
-
-..menu-logo{
-width:230px;
-height:auto;
-object-fit:contain;
-background:#fffaf2;
-mix-blend-mode:multiply;
+    padding:30px 20px 20px;
+    border-bottom:1px solid rgba(0,0,0,0.08);
 }
 
 .menu-header h2{
     margin:0;
-    font-size:24px;
-    color:#1b2138;
+    font-size:28px;
     font-weight:700;
+    letter-spacing:1px;
+    color:#111827;
 }
 
 .menu-header p{
-    margin-top:6px;
-    font-size:14px;
+    margin-top:8px;
+    font-size:16px;
     color:#777;
-}
+   }
 
 .menu-title{
     padding:20px 22px 8px;
