@@ -252,16 +252,16 @@ resultsBox.appendChild(card);
 
 function toggleMenu(){
 
-    const menu = document.getElementById("sideMenu");
-    const overlay = document.getElementById("menuOverlay");
+const menu = document.getElementById("sideMenu");
+const overlay = document.getElementById("menuOverlay");
 
-    menu.classList.toggle("open");
-    overlay.classList.toggle("show");
+menu.classList.toggle("open");
+overlay.classList.toggle("show");
 
-    if(menu.classList.contains("open")){
-        document.body.style.overflow = "hidden";
-    }else{
-        document.body.style.overflow = "";
-    }
-
+if(menu.classList.contains("open")){
+    document.body.style.overflow = "hidden";
+}else{
+    document.body.style.overflow = "";
 }
+
+  }
