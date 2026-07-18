@@ -2608,3 +2608,9 @@ letter-spacing:1px;
 color:#9b8b6a;
 border-bottom:1px solid rgba(0,0,0,0.08);
 }
+
+body.menu-open{
+    overflow:hidden;
+    position:fixed;
+    width:100%;
+}
