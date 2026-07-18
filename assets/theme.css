@@ -2579,17 +2579,17 @@ box-shadow:8px 0 30px rgba(0,0,0,0.15);
 .menu-overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,0.45);
     opacity:0;
     visibility:hidden;
-    transition:.3s;
+    transition:0.3s;
     z-index:9998;
 }
 
 .menu-overlay.show{
     opacity:1;
     visibility:visible;
-}
+   }
 
 .side-menu a{
 border-bottom:1px solid rgba(0,0,0,0.08);
