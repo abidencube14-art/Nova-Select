@@ -260,8 +260,10 @@ overlay.classList.toggle("show");
 
 if(menu.classList.contains("open")){
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 }else{
     document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
 }
 
-  }
+                 }
